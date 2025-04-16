@@ -38,6 +38,14 @@ if ( UART.getVescValues() ) {
   Serial.println(UART.data.tachometerAbs);
 }
 ```
+
+### Changes in this fork
+
+Setting active profile where profile is the index of the profile starting at 0 for the first profile.
+
+```cpp
+vesc.setProfile(profile);
+```
   
 You can find example usage and more information in the examples directory.  
   

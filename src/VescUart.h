@@ -166,6 +166,12 @@ class VescUart
         void setDuty(float duty, uint8_t canId);
 
         /**
+         * @brief      Set the active profile on the VESC
+         * @param      profile  - The profile slot to activate (0-4)
+         */
+        void setProfile(uint8_t profile);
+
+        /**
          * @brief      Send a keepalive message
          */
         void sendKeepalive(void);

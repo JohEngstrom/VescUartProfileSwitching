@@ -282,6 +282,14 @@ bool VescUart::getVescValues(uint8_t canId) {
 	}
 	return false;
 }
+
+void VescUart::setProfile(uint8_t profile) {
+  const uint8_t COMM_SELECT_MCCONF = 254;
+
+  uint8_t payload[1] = { profile };
+  packSendPayload(COMM_SELECT_MCCONF, payload, 1);
+}
+
 void VescUart::setNunchuckValues() {
 	return setNunchuckValues(0);
 }
